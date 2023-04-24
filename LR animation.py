@@ -6,12 +6,12 @@ screen.fill((0,0,0))
 clock = pygame.time.Clock() #set up clock
 gameover = False #variable to run our game loop
 
-Link = pygame.image.load('dude.png') #load your spritesheet
+Link = pygame.image.load('Mario.jpg') #load your spritesheet
 Link.set_colorkey((255, 0, 255)) #this makes bright pink (255, 0, 255) transparent (sort of)
 
 #player variables
 xpos = 500 #xpos of player
-ypos = 500-18 #ypos of player
+ypos = 500-232 #ypos of player
 vx = 0 #x velocity of player
 keys = [False, False, False, False] #this list holds whether each key has been pressed
 
@@ -19,8 +19,8 @@ LEFT=0
 RIGHT = 1
 
 #animation variables variables
-frameWidth = 16
-frameHeight = 16
+frameWidth = 170
+frameHeight = 232
 RowNum = 0 #for left animation, this will need to change for other animations
 frameNum = 0
 ticker = 0
@@ -74,7 +74,7 @@ while not gameover:
           frameNum+=1
            #If we are over the number of frames in our sprite, reset to 0.
            #In this particular case, there are 10 frames (0 through 9)
-        if frameNum>3: 
+        if frameNum>2: 
            frameNum = 0
   
     # RENDER--------------------------------------------------------------------------------
@@ -87,3 +87,4 @@ while not gameover:
     
 #end game loop------------------------------------------------------------------------------
 pygame.quit()
+
